@@ -37,7 +37,7 @@ function compileCanopyTokens() {
 const canopyTokensCss = compileCanopyTokens();
 
 module.exports = {
-  presets: [require("@canopy-iiif/app/ui/canopy-iiif-preset")],
+  // presets: [require("@canopy-iiif/app/ui/canopy-iiif-preset")],
   content: [
     toGlob(projectRoot, "content/**/*.{mdx,html}"),
     toGlob(canopyUiDist, "**/*.{js,mjs,jsx,tsx}"),
@@ -50,7 +50,7 @@ module.exports = {
     // preflight: false, // uncomment to disable base reset
   },
   plugins: [
-    require("@canopy-iiif/app/ui/canopy-iiif-plugin"),
+    // require("@canopy-iiif/app/ui/canopy-iiif-plugin"),
     plugin(function ({ addBase, postcss }) {
       if (!canopyTokensCss || !canopyTokensCss.trim() || !postcss || !postcss.parse) {
         return;
